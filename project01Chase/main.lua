@@ -26,8 +26,10 @@ COLOR_DARK_GREY = { 0.3, 0.3, 0.3 }
 -- Called automagically by LOVE2D --
 ------------------------------------
 function love.draw()
+    -- DRAW BACKGROUND
     love.graphics.setColor(COLOR_DARK_GREY)
     love.graphics.rectangle("fill", 0, 0, 1024, 768)
+    -- DRAW PLAYER
     love.graphics.setColor(COLOR_WHITE)
     love.graphics.rectangle("fill", 400, 300, 50, 50)
     love.graphics.setColor(COLOR_BLACK)
