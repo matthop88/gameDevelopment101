@@ -119,9 +119,11 @@ function drawMonster()
     love.graphics.circle("line", monsterX, monsterY, 75, 75)
     love.graphics.setColor(COLOR_WHITE)
     love.graphics.circle("fill", monsterEye1X, monsterEye1Y, 20, 20)
-    love.graphics.circle("fill", monsterEye2X, monsterEye2Y, 20, 20)
     love.graphics.setColor(COLOR_BLACK)
     love.graphics.circle("line", monsterEye1X, monsterEye1Y, 20, 20)
+    love.graphics.setColor(COLOR_WHITE)
+    love.graphics.circle("fill", monsterEye2X, monsterEye2Y, 20, 20)
+    love.graphics.setColor(COLOR_BLACK)
     love.graphics.circle("line", monsterEye2X, monsterEye2Y, 20, 20)
     
 end
