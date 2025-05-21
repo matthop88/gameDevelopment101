@@ -42,11 +42,7 @@ COLOR_DARK_GREY = { 0.3, 0.3, 0.3 }
 function love.draw()
     drawBackground()
     drawPlayer()
-
-    love.graphics.setColor(COLOR_WHITE)
-    love.graphics.circle("fill", monsterX, monsterY, 75, 75)
-    love.graphics.setColor(COLOR_BLACK)
-    love.graphics.circle("line", monsterX, monsterY, 75, 75)
+    drawMonster()
 end
 
 -------------------------------------------------
@@ -92,6 +88,13 @@ function drawPlayer()
     drawOutlineCRect(playerX, playerY, 50, 50)
     love.graphics.setColor(COLOR_BLACK)
     drawFilledCRect(playerX, playerY, 10, 10)
+end
+
+function drawMonster()
+    love.graphics.setColor(COLOR_WHITE)
+    love.graphics.circle("fill", monsterX, monsterY, 75, 75)
+    love.graphics.setColor(COLOR_BLACK)
+    love.graphics.circle("line", monsterX, monsterY, 75, 75)
 end
 
 -- ...
