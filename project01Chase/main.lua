@@ -7,8 +7,13 @@ require("utils")
 WINDOW_WIDTH    = 1050
 WINDOW_HEIGHT   =  800
 
-playerX         = 375
-playerY         = 275
+playerX         =  375
+playerY         =  275
+
+PLAYER_SCREEN_LEFT     =   25
+PLAYER_SCREEN_RIGHT    = 1025
+PLAYER_SCREEN_TOP      =   25
+PLAYER_SCREEN_BOTTOM   =  775
 
 COLOR_BLACK     = { 0,   0,   0   }
 COLOR_WHITE     = { 1,   1,   1   }
@@ -49,6 +54,15 @@ function love.keypressed(key)
     elseif key == "down" then
         playerY = playerY + 50
     end
+
+    if playerX < PLAYER_SCREEN_LEFT then playerX = PLAYER_SCREEN_RIGHT
+    elseif playerX > PLAYER_SCREEN_RIGHT then playerX = PLAYER_SCREEN_LEFT
+    end
+
+    if playerY < PLAYER_SCREEN_TOP then playerY = PLAYER_SCREEN_BOTTOM
+    elseif playerY > PLAYER_SCREEN_BOTTOM then playerY = PLAYER_SCREEN_TOP
+    end
+        
 end
 
 -- ...
