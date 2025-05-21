@@ -4,6 +4,9 @@ require("utils")
 --                     Global Variables                     --
 --------------------------------------------------------------
 
+WINDOW_WIDTH    = 1050
+WINDOW_HEIGHT   =  800
+
 playerX         = 375
 playerY         = 275
 
@@ -56,7 +59,7 @@ end
 
 function drawBackground()
     love.graphics.setColor(COLOR_DARK_GREY)
-    love.graphics.rectangle("fill", 0, 0, 1024, 768)
+    love.graphics.rectangle("fill", 0, 0, WINDOW_WIDTH, WINDOW_HEIGHT)
 end
 
 function drawPlayer()
@@ -101,5 +104,5 @@ end
 --------------------------------------------------------------
 
 love.window.setTitle("CHASE!!!")
-love.window.setMode(1050, 800)
+love.window.setMode(WINDOW_WIDTH, WINDOW_HEIGHT)
 -- ...
