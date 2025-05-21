@@ -20,6 +20,7 @@ monsterY        =  100
 
 COLOR_BLACK     = { 0,   0,   0   }
 COLOR_WHITE     = { 1,   1,   1   }
+COLOR_OFF_WHITE = { 0.9, 0.9, 0.9 }
 COLOR_DARK_GREY = { 0.3, 0.3, 0.3 }
 -- ...
 -- ...
@@ -91,7 +92,7 @@ function drawPlayer()
 end
 
 function drawMonster()
-    love.graphics.setColor(COLOR_WHITE)
+    love.graphics.setColor(COLOR_OFF_WHITE)
     love.graphics.circle("fill", monsterX, monsterY, 75, 75)
     love.graphics.setColor(COLOR_BLACK)
     love.graphics.circle("line", monsterX, monsterY, 75, 75)
