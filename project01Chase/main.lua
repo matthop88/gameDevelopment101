@@ -37,7 +37,15 @@ end
 --     Called every time a key is pressed      --
 -------------------------------------------------
 function love.keypressed(key)
-    print(key)
+    if key == "left" then
+        playerX = playerX - 50
+    elseif key == "right" then
+        playerX = playerX + 50
+    elseif key == "up" then
+        playerY = playerY - 50
+    elseif key == "down" then
+        playerY = playerY + 50
+    end
 end
 
 -- ...
