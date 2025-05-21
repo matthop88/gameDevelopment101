@@ -65,6 +65,8 @@ function drawPlayer()
     love.graphics.setColor(COLOR_BLACK)
     love.graphics.setLineWidth(5)
     love.graphics.rectangle("line", playerX, playerY, 50, 50)
+    love.graphics.setColor(COLOR_BLACK)
+    love.graphics.rectangle("fill", playerX, playerY, 10, 10)
 end
 
 -- ...
