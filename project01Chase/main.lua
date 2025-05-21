@@ -4,7 +4,7 @@
 --                     Global Variables                     --
 --------------------------------------------------------------
 
--- ...
+COLOR_DARK_GREY = { 0.3, 0.3, 0.3 }
 -- ...
 -- ...
 
@@ -24,7 +24,7 @@
 -- Called automagically by LOVE2D --
 ------------------------------------
 function love.draw()
-    love.graphics.setColor(0.3, 0.3, 0.3)
+    love.graphics.setColor(COLOR_DARK_GREY)
     love.graphics.rectangle("fill", 0, 0, 1024, 768)
 end
 
