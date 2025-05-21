@@ -4,6 +4,9 @@
 --                     Global Variables                     --
 --------------------------------------------------------------
 
+playerX         = 400
+playerY         = 300
+
 COLOR_BLACK     = { 0,   0,   0   }
 COLOR_WHITE     = { 1,   1,   1   }
 COLOR_DARK_GREY = { 0.3, 0.3, 0.3 }
@@ -44,10 +47,10 @@ end
 
 function drawPlayer()
     love.graphics.setColor(COLOR_WHITE)
-    love.graphics.rectangle("fill", 400, 300, 50, 50)
+    love.graphics.rectangle("fill", playerX, playerY, 50, 50)
     love.graphics.setColor(COLOR_BLACK)
     love.graphics.setLineWidth(5)
-    love.graphics.rectangle("line", 400, 300, 50, 50)
+    love.graphics.rectangle("line", playerX, playerY, 50, 50)
 end
 
 -- ...
