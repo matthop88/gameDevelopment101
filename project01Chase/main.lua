@@ -4,6 +4,7 @@
 --                     Global Variables                     --
 --------------------------------------------------------------
 
+COLOR_WHITE     = { 1,   1,   1   }
 COLOR_DARK_GREY = { 0.3, 0.3, 0.3 }
 -- ...
 -- ...
@@ -26,7 +27,7 @@ COLOR_DARK_GREY = { 0.3, 0.3, 0.3 }
 function love.draw()
     love.graphics.setColor(COLOR_DARK_GREY)
     love.graphics.rectangle("fill", 0, 0, 1024, 768)
-    love.graphics.setColor(1, 1, 1)
+    love.graphics.setColor(COLOR_WHITE)
     love.graphics.rectangle("fill", 400, 300, 50, 50)
 end
 
