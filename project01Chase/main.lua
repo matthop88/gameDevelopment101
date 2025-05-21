@@ -20,8 +20,11 @@ monsterY        =  100
 
 monsterEye1X    =  650
 monsterEye1Y    =   50
+monsterEye1R    =   20
+
 monsterEye2X    =  680
 monsterEye2Y    =   50
+monsterEye2R    =   20
 
 COLOR_BLACK     = { 0,   0,   0   }
 COLOR_WHITE     = { 1,   1,   1   }
@@ -79,6 +82,14 @@ function love.keypressed(key)
         monsterEye2Y = monsterEye2Y - 1
     elseif key == "m" then
         monsterEye2Y = monsterEye2Y + 1
+    elseif key == "2" then
+        monsterEye1R = monsterEye1R + 1
+    elseif key == "1" then
+        monsterEye1R = monsterEye1R - 1
+    elseif key == "0" then
+        monsterEye2R = monsterEye2R + 1
+    elseif key == "9" then
+        monsterEye2R = monsterEye2R - 1
     end
 
     if playerX < PLAYER_SCREEN_LEFT then playerX = PLAYER_SCREEN_RIGHT
@@ -118,13 +129,13 @@ function drawMonster()
     love.graphics.setColor(COLOR_BLACK)
     love.graphics.circle("line", monsterX, monsterY, 75, 75)
     love.graphics.setColor(COLOR_WHITE)
-    love.graphics.circle("fill", monsterEye1X, monsterEye1Y, 20, 20)
+    love.graphics.circle("fill", monsterEye1X, monsterEye1Y, monsterEye1R, monsterEye1R)
     love.graphics.setColor(COLOR_BLACK)
-    love.graphics.circle("line", monsterEye1X, monsterEye1Y, 20, 20)
+    love.graphics.circle("line", monsterEye1X, monsterEye1Y, monsterEye1R, monsterEye1R)
     love.graphics.setColor(COLOR_WHITE)
-    love.graphics.circle("fill", monsterEye2X, monsterEye2Y, 20, 20)
+    love.graphics.circle("fill", monsterEye2X, monsterEye2Y, monsterEye2R, monsterEye2R)
     love.graphics.setColor(COLOR_BLACK)
-    love.graphics.circle("line", monsterEye2X, monsterEye2Y, 20, 20)
+    love.graphics.circle("line", monsterEye2X, monsterEye2Y, monsterEye2R, monsterEye2R)
     
 end
 
