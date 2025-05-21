@@ -25,7 +25,7 @@
 ------------------------------------
 function love.draw()
     love.graphics.setColor(0.3, 0.3, 0.3)
-    love.graphics.rectangle("fill", 1024, 768)
+    love.graphics.rectangle("fill", 0, 0, 1024, 768)
 end
 
 -- ...
