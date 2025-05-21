@@ -15,6 +15,9 @@ PLAYER_SCREEN_RIGHT    = 1025
 PLAYER_SCREEN_TOP      =   25
 PLAYER_SCREEN_BOTTOM   =  775
 
+monsterX        =  700
+monsterY        =  100
+
 COLOR_BLACK     = { 0,   0,   0   }
 COLOR_WHITE     = { 1,   1,   1   }
 COLOR_DARK_GREY = { 0.3, 0.3, 0.3 }
@@ -39,6 +42,11 @@ COLOR_DARK_GREY = { 0.3, 0.3, 0.3 }
 function love.draw()
     drawBackground()
     drawPlayer()
+
+    love.graphics.setColor(COLOR_WHITE)
+    love.graphics.circle("fill", monsterX, monsterY, 75, 75)
+    love.graphics.setColor(COLOR_BLACK)
+    love.graphics.circle("line", monsterX, monsterY, 75, 75)
 end
 
 -------------------------------------------------
