@@ -4,8 +4,8 @@ require("utils")
 --                     Global Variables                     --
 --------------------------------------------------------------
 
-playerX         = 400
-playerY         = 300
+playerX         = 375
+playerY         = 275
 
 COLOR_BLACK     = { 0,   0,   0   }
 COLOR_WHITE     = { 1,   1,   1   }
@@ -101,5 +101,5 @@ end
 --------------------------------------------------------------
 
 love.window.setTitle("CHASE!!!")
-love.window.setMode(1024, 768)
+love.window.setMode(1050, 800)
 -- ...
