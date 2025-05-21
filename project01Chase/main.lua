@@ -63,6 +63,14 @@ function love.keypressed(key)
         playerY = playerY - 50
     elseif key == "down" then
         playerY = playerY + 50
+    elseif key == "a" then
+        monsterEye1X = monsterEye1X - 1
+    elseif key == "d" then
+        monsterEye1X = monsterEye1X + 1
+    elseif key == "w" then
+        monsterEye1Y = monsterEye1Y - 1
+    elseif key == "s" then
+        monsterEye1Y = monsterEye1Y + 1
     end
 
     if playerX < PLAYER_SCREEN_LEFT then playerX = PLAYER_SCREEN_RIGHT
