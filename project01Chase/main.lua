@@ -27,12 +27,7 @@ COLOR_DARK_GREY = { 0.3, 0.3, 0.3 }
 ------------------------------------
 function love.draw()
     drawBackground()
-    -- DRAW PLAYER
-    love.graphics.setColor(COLOR_WHITE)
-    love.graphics.rectangle("fill", 400, 300, 50, 50)
-    love.graphics.setColor(COLOR_BLACK)
-    love.graphics.setLineWidth(5)
-    love.graphics.rectangle("line", 400, 300, 50, 50)
+    drawPlayer()
 end
 
 -- ...
@@ -45,6 +40,14 @@ end
 function drawBackground()
     love.graphics.setColor(COLOR_DARK_GREY)
     love.graphics.rectangle("fill", 0, 0, 1024, 768)
+end
+
+function drawPlayer()
+    love.graphics.setColor(COLOR_WHITE)
+    love.graphics.rectangle("fill", 400, 300, 50, 50)
+    love.graphics.setColor(COLOR_BLACK)
+    love.graphics.setLineWidth(5)
+    love.graphics.rectangle("line", 400, 300, 50, 50)
 end
 
 -- ...
