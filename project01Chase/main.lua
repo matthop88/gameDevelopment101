@@ -18,6 +18,11 @@ PLAYER_SCREEN_BOTTOM   =  775
 monsterX        =  700
 monsterY        =  100
 
+monsterEye1X    =  650
+monsterEye1Y    =   50
+monsterEye2X    =  680
+monsterEye2Y    =   50
+
 COLOR_BLACK     = { 0,   0,   0   }
 COLOR_WHITE     = { 1,   1,   1   }
 COLOR_OFF_WHITE = { 0.9, 0.9, 0.9 }
@@ -96,6 +101,9 @@ function drawMonster()
     love.graphics.circle("fill", monsterX, monsterY, 75, 75)
     love.graphics.setColor(COLOR_BLACK)
     love.graphics.circle("line", monsterX, monsterY, 75, 75)
+    love.graphics.setColor(COLOR_WHITE)
+    love.graphics.circle("fill", monsterEye1X, monsterEye1Y, 20, 20)
+    love.graphics.circle("fill", monsterEye2X, monsterEye2Y, 20, 20)
 end
 
 -- ...
