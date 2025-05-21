@@ -61,15 +61,15 @@ end
 
 function drawPlayer()
     love.graphics.setColor(COLOR_WHITE)
-    drawCenteredRectangle("fill", playerX, playerY, 50, 50)
+    drawCRect("fill", playerX, playerY, 50, 50)
     love.graphics.setColor(COLOR_BLACK)
     love.graphics.setLineWidth(5)
-    drawCenteredRectangle("line", playerX, playerY, 50, 50)
+    drawCRect("line", playerX, playerY, 50, 50)
     love.graphics.setColor(COLOR_BLACK)
-    drawCenteredRectangle("fill", playerX, playerY, 10, 10)
+    drawCRect("fill", playerX, playerY, 10, 10)
 end
 
-function drawCenteredRectangle(fillMode, x, y, w, h)
+function drawCRect(fillMode, x, y, w, h)
     love.graphics.rectangle(fillMode, x - (w / 2), y - (h / 2), w, h)
 end
 
