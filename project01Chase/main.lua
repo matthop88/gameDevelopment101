@@ -69,6 +69,10 @@ function drawPlayer()
     love.graphics.rectangle("fill", playerX - 5, playerY - 5, 10, 10)
 end
 
+function drawCenteredRectangle(fillMode, x, y, w, h)
+    love.graphics.rectangle(fillMode, x - (w / 2), y - (h / 2), w, h)
+end
+
 -- ...
 -- ...
 
