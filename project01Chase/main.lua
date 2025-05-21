@@ -1,4 +1,4 @@
-
+require("utils")
 
 --------------------------------------------------------------
 --                     Global Variables                     --
@@ -61,16 +61,12 @@ end
 
 function drawPlayer()
     love.graphics.setColor(COLOR_WHITE)
-    drawCRect("fill", playerX, playerY, 50, 50)
+    drawFilledCRect(playerX, playerY, 50, 50)
     love.graphics.setColor(COLOR_BLACK)
     love.graphics.setLineWidth(5)
-    drawCRect("line", playerX, playerY, 50, 50)
+    drawOutlineCRect(playerX, playerY, 50, 50)
     love.graphics.setColor(COLOR_BLACK)
-    drawCRect("fill", playerX, playerY, 10, 10)
-end
-
-function drawCRect(fillMode, x, y, w, h)
-    love.graphics.rectangle(fillMode, x - (w / 2), y - (h / 2), w, h)
+    drawFilledCRect(playerX, playerY, 10, 10)
 end
 
 -- ...
