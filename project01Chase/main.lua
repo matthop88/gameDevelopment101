@@ -18,14 +18,6 @@ PLAYER_SCREEN_BOTTOM   =  775
 monsterX        =  700
 monsterY        =  100
 
-monsterEye1X    =  650
-monsterEye1Y    =   50
-monsterEye1R    =   20
-
-monsterEye2X    =  680
-monsterEye2Y    =   50
-monsterEye2R    =   20
-
 COLOR_BLACK     = { 0,   0,   0   }
 COLOR_WHITE     = { 1,   1,   1   }
 COLOR_OFF_WHITE = { 0.9, 0.9, 0.9 }
@@ -66,30 +58,6 @@ function love.keypressed(key)
         playerY = playerY - 50
     elseif key == "down" then
         playerY = playerY + 50
-    elseif key == "a" then
-        monsterEye1X = monsterEye1X - 1
-    elseif key == "d" then
-        monsterEye1X = monsterEye1X + 1
-    elseif key == "w" then
-        monsterEye1Y = monsterEye1Y - 1
-    elseif key == "s" then
-        monsterEye1Y = monsterEye1Y + 1
-    elseif key == "j" then
-        monsterEye2X = monsterEye2X - 1
-    elseif key == "k" then
-        monsterEye2X = monsterEye2X + 1
-    elseif key == "i" then
-        monsterEye2Y = monsterEye2Y - 1
-    elseif key == "m" then
-        monsterEye2Y = monsterEye2Y + 1
-    elseif key == "2" then
-        monsterEye1R = monsterEye1R + 1
-    elseif key == "1" then
-        monsterEye1R = monsterEye1R - 1
-    elseif key == "0" then
-        monsterEye2R = monsterEye2R + 1
-    elseif key == "9" then
-        monsterEye2R = monsterEye2R - 1
     end
 
     if playerX < PLAYER_SCREEN_LEFT then playerX = PLAYER_SCREEN_RIGHT
@@ -127,16 +95,7 @@ function drawMonster()
     love.graphics.setColor(COLOR_OFF_WHITE)
     love.graphics.circle("fill", monsterX, monsterY, 75, 75)
     love.graphics.setColor(COLOR_BLACK)
-    love.graphics.circle("line", monsterX, monsterY, 75, 75)
-    love.graphics.setColor(COLOR_WHITE)
-    love.graphics.circle("fill", monsterEye1X, monsterEye1Y, monsterEye1R, monsterEye1R)
-    love.graphics.setColor(COLOR_BLACK)
-    love.graphics.circle("line", monsterEye1X, monsterEye1Y, monsterEye1R, monsterEye1R)
-    love.graphics.setColor(COLOR_WHITE)
-    love.graphics.circle("fill", monsterEye2X, monsterEye2Y, monsterEye2R, monsterEye2R)
-    love.graphics.setColor(COLOR_BLACK)
-    love.graphics.circle("line", monsterEye2X, monsterEye2Y, monsterEye2R, monsterEye2R)
-    
+    love.graphics.circle("line", monsterX, monsterY, 75, 75)    
 end
 
 -- ...
